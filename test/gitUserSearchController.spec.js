@@ -12,4 +12,8 @@ describe('GitUserSearchController', function() {
     expect(ctrl.searchTerm).toBeUndefined();
   });
 
+
+
+
+
 });
