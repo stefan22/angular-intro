@@ -31,3 +31,9 @@ bower install angular-route --save-dev
 npm install karma --save-dev
 npm install karma-jasmine karma-chrome-launcher karma-phantomjs-launcher --save-dev
 npm install -g karma-cli
+
+
+
+run test:x
+
+  karma start test/karma.conf.js
