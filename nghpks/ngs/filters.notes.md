@@ -46,33 +46,7 @@
 
 ![](../images/step3html.png)
 
-<br>
 
-```
-    ex:
-
-        {{"hello" | uppercase }}
-
-        // just by `placing` a `pipe` between the `output` of some `expression`
-        // and the `name` of the `filter`
-
-        * it can also be $scope.value, assuming value is 'hello' in controller
-
-
-        //also custom arguments
-
-        {{ "hello" | currency : arg1 : arg2 }}
-
-        * they just need to be separated by a colon  
-
-        //example of custom currency
-
-        {{"24" | currency : '#bu£' }}
-
-
-
-
-```
 
 ### creating custom filters
 
