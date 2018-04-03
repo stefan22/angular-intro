@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="meApp">
+  <head>
+    <meta charset="utf-8">
+    <title>ng-repeat</title>
+    <style>
+      button {cursor: pointer;}
+    </style>
+  </head>
+  <body ng-controller="MainController">
+    <h1>Binding</h1>
+    
+    <div class="main">
+     <!-- clicking on show watchers displays 1
+     ng-model for sure 1 watcher   and fullname property not showing any    -->
+     
+     <!-- Important: not showing
+     The moment the fullName property gets initialised with an empty string, that
+     becomes its value. Because we have just one watcher, there's no watcher to output
+     when its value changes. -->
+
+     <!-- After the one watcher, digest cycle starts and loops over all watches and
+     outputs its initial value to the browser, and then removes the watcher for
+     fullName.
+     Thus, property with 1-time bound will never be updated again - watcher no
+     longer exists. -->
+
+     <!-- It can be fixed by removing the initial value, since we only got one shot at it.
+     And just leave, the $scope.fullName inside of setFullName. -->
+      
+      <button ng-click="showNumberOfWatchers()">showNumberOfWatchers</button><br><br>
+
+      <button ng-click="setFullName()">setFullName</button> <br><br>
+
+      <!-- 1-time binder for fullname -->
+      Full name is: {{ :: fullName }} <br><br> 
+
+      <button ng-click="logFirstName()">logFirstName</button> <br><br>
+      <button ng-click="logFullName()">logFullName</button> <br><br>
+
+      <div>
+          <!-- // 2-way binding for fullname -->
+        <input type="text" ng-model="firstName" />
+      </div>
+      
+    </div>
+
+    
+
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
