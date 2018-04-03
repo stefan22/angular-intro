@@ -42,6 +42,12 @@
 
 - filters can be used straight in Html
 
+<br>
+
+![](../images/step3html.png)
+
+<br>
+
 ```
     ex:
 
@@ -176,14 +182,7 @@
 
 ```
 
-### custom filter with additional arguments
-
-
-<br>
-
-![](../images/step3html.png)
-
-<br>
+### filter chained
 
 
 <br>
