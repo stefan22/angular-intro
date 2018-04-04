@@ -25,6 +25,7 @@
 
 - custom arguments can change the way the filtering function is filtering
 
+
 ```
     ex:
 
@@ -41,55 +42,33 @@
 
 - filters can be used straight in Html
 
-```
-    ex:
+<br>
 
-        {{"hello" | uppercase }}
-
-        // just by `placing` a `pipe` between the `output` of some `expression`
-        // and the `name` of the `filter`
-
-        * it can also be $scope.value, assuming value is 'hello' in controller
+![](../images/step3html.png)
 
 
-        //also custom arguments
-
-        {{ "hello" | currency : arg1 : arg2 }}
-
-        * they just need to be separated by a colon  
-
-        //example of custom currency
-
-        {{"24" | currency : '#bu£' }}
-
-
-
-
-```
 
 ### creating custom filters
 
-```
-    ex: example of a factory design pattern
+<br>
 
-    // a factory is a central place in your code that produces new objects or functions
+![](../images/filterAdditionalArgument.png)
 
-    function CustomFilterFactory() {
+<br>
 
-        return function(input) {
-            //change input
-            return changedInput;
-        };
 
-    }
-
-```
-
-* step 1 Define a filter factory function.
     - at a minimum, the filter function itself takes some input as an argument and    
       and usually returns some manipulated version of that input, in other words     
       the filter output.
     - this is the function that creates and returns an instance of our filter function.
+
+
+<br>
+
+![](../images/step2.png)
+
+<br>
+
 
 * step 2 We need to Register filter factory with module
     - similar to registering controllers (by doing `.controller` on the module)    
@@ -110,6 +89,13 @@
 
 
 ```
+
+
+<br>
+
+![](../images/step3.png)
+
+<br>
 
 
 * step 3 Inject it with nameFilter
@@ -170,31 +156,7 @@
 
 ```
 
-### custom filter with additional arguments
-
-<br>
-
-![](../images/filterAdditionalArgument.png)
-
-<br>
-
-<br>
-
-![](../images/step2.png)
-
-<br>
-
-<br>
-
-![](../images/step3.png)
-
-<br>
-
-<br>
-
-![](../images/step3html.png)
-
-<br>
+### filter chained
 
 
 <br>
