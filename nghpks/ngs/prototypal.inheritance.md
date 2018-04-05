@@ -96,7 +96,7 @@
 :checkered_flag:
 
 ```
-  (function() {
+(function() {
 'use strict';
 
 angular.module('isApp', [])
