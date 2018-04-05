@@ -129,8 +129,8 @@ function ParentController($scope) {
 function ChildController($scope) {
 
 	console.log('$scope.parentValue: ', $scope.parentValue);     // it doesnt have a parent value 
-                                                               // of its own; which means is  
-                                                               // going to go up the prototype chain
+                                                                     // of its own; which means is  
+                                                                     // going to go up the prototype chain
 	console.log('Child $scope: ', $scope);
 
 }
