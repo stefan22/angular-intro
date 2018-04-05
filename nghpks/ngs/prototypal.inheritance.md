@@ -93,7 +93,54 @@
 
 
 
+:checkered_flag:
 
+```
+  (function() {
+'use strict';
+
+angular.module('isApp', [])
+.controller('ParentController', ParentController)
+.controller('ChildController', ChildController);
+
+ParentController.$inject = ['$scope'];
+ChildController.$inject = ['$scope'];
+
+/*
+
+(2) cause when we call the angular.controller method, the function value that is passed to it
+	is treated as a function constructor, so there's going to be a 'new' in front and 'this'
+	is going to point to the instance of parentController in this case
+
+*/
+
+function ParentController($scope) {
+	
+	$scope.parentValue = 1;                      //set a property value
+	
+	$scope.pc = this;                            //sets a parent controller instance (2)
+	
+	$scope.pc.parentValue = 1;                   //controller value property for controller instance
+
+
+}
+
+
+function ChildController($scope) {
+
+	console.log('$scope.parentValue: ', $scope.parentValue);     // it doesnt have a parent value 
+                                                               // of its own; which means is  
+                                                               // going to go up the prototype chain
+	console.log('Child $scope: ', $scope);
+
+}
+
+
+
+})();
+
+
+```
 
 
 
