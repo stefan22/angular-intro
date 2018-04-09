@@ -141,8 +141,19 @@ function ChildController($scope) {
 
 
 ```
+	function ParentController($scope) {
+	    $scope.welcome = "Hey Hey!";
+	    var parent = this; //new instance controller then
+	    parent.value = 'parent value';
+	    //or without it, just as ref to ParentController here
+	    this.value = "parent value";  
+	}
+	
+	<div ng-controller="ParentController as parent">
+		{{parent.value}}
 
 
+```
 
 
 
