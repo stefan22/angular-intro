@@ -154,7 +154,9 @@ function ChildController($scope) {
 
 
 	//here also using same property name 'value' but no masking as it ref to its controller -
-	//it works like a regular javascript object - prototypal inheritance ends there as long as it's ref the controller
+	//it works like a regular javascript object - prototypal inheritance ends there as long as 
+	//it's ref the controller
+	
 	function ChildController($scope) {
 	    var child = this;
 	    child.value = 5;
