@@ -166,7 +166,8 @@ function ChildController($scope) {
 
 
 
-
+	//console => shows child property &
+	//	  => __proto__ has parent controller w/a parent property and a value of 'parent value'
 
 
 ```
