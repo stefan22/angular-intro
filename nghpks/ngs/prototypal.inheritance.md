@@ -141,9 +141,9 @@ function ChildController($scope) {
 
 
 ```
-	function ParentController($scope) {
-	    $scope.welcome = "Hey Hey!";
-	    var parent = this; //new instance controller then
+	function ParentController($scope) { // $scope only using it for first line, otherwise not needed 
+	    $scope.welcome = "Hey Hey!";    // unless i need to log something	
+	    var parent = this;             //new instance controller then
 	    parent.value = 'parent value';
 	    //or without it, just as ref to ParentController here
 	    this.value = "parent value";  
