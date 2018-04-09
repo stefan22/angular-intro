@@ -173,7 +173,21 @@ function ChildController($scope) {
 ```
 
 
+> simple example that shows interpreter needing to go up the prototype chain to retrieve the value
 
+```
+	<div ng-controller="MainController as main1">
+		<div ng-controller="Main2Controller as main2">
+			{{main1.name}}
+		</div>
+	</div>	
+	
+	ask me why?  main1.name isn't found inside of Main2Controller 
+	main1 actually refers specifically about MainController function so no chance at all
+	even if they both had a property name.
+	So inside main2, goes up to main1 and looks for name property - easy
+	
+```
 
 
 
