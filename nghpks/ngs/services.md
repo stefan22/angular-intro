@@ -94,7 +94,12 @@ app.js
 
     function ShoppingListShowController(ShoppingListService) {  
         var showList = this;                                    
-        showList.items = ShoppingListService.getItems();         
+        showList.items = ShoppingListService.getItems();  
+        
+        //to be called from index page
+        showList.removeItem = function(index) {
+            ShoppingListService.removeItem(index);
+        };
     }                                                                       
 
     /*
@@ -120,6 +125,12 @@ app.js
 
         service.getItems = function() { //getItems exposes items array as it returns items
             return items;
+        };
+        
+        //remove an item using its index
+        
+        service.removeItem = function(index) {
+            items.splice(index,1);
         };
     }
 
@@ -147,6 +158,8 @@ index.html
                   <tr>
                     <td>Name: {{item.name}}</td>
                     <td>Quantity: {{item.quantity}}</td>
+                    <!-- a remove button  -->
+                    <td class="remove" ng-click="showList.removeItem($index);">Remove item</td>
                   </tr>
                </table>
             </li>
