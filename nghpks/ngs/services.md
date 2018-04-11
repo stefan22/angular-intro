@@ -105,7 +105,8 @@ app.js
     /*
         //ShoppingListService function
         ------------------------------
-        ANYTHING WITH THE .SERVICE GETS TREATED AS A FUNCTION CONSTRUCTOR BY ANGULAR. (ADDS THE 'NEW' KEYWORD)
+        ANYTHING WITH THE .SERVICE GETS TREATED AS A FUNCTION CONSTRUCTOR BY ANGULAR. 
+        (ADDS THE 'NEW' KEYWORD)
         and it's being used as a function constructor, so we can attach things to the 
         'this' variable in order to expose them to the global scope.
     */    
