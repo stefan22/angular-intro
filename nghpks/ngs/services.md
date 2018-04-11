@@ -46,9 +46,12 @@ retrieve it in another controller injected with the same service.
 
 ### example using two separate controllers with one service to create a shopping list adder
 
-
+app.js
+index.html
 
 ```
+app.js
+
     //ShoppingListAddController
     var ShoppingListAddController = myApp
     .controller('ShoppingListAddController', ShoppingListAddController);
@@ -122,8 +125,37 @@ retrieve it in another controller injected with the same service.
 
 ```
 
+index.html
+
+```
+index.html
+
+    <h1>Custom Service</h1>
+    <div ng-controller="ShoppingListAddController as itemAdder">
+        
+        <input type="text" ng-model="itemAdder.itemName" placeholder="item name" />
+        <input type="number" ng-model="itemAdder.itemQuantity" placeholder="quantity" />
+        <button ng-click="itemAdder.addItem();">Add Item to Shopping List</button>
+        
+    </div>
+    <!-- ShoppingListController -->
+
+    <div ng-controller="ShoppingListShowController as showList">
+        <ol>
+            <li ng-repeat="item in showList.items">
+               <table>
+                  <tr>
+                    <td>Name: {{item.name}}</td>
+                    <td>Quantity: {{item.quantity}}</td>
+                  </tr>
+               </table>
+            </li>
+        </ol>
+
+    </div>
 
 
+```
 
 
 
