@@ -43,7 +43,83 @@ So if you place some data into the service of one controller, you can immediatel
 retrieve it in another controller injected with the same service.
 
 
+### example using two separate controllers with one service to create a shopping list adder
 
+
+
+```
+    //ShoppingListAddController
+    var ShoppingListAddController = myApp
+    .controller('ShoppingListAddController', ShoppingListAddController);
+
+     //ShoppingListShowController
+    var ShoppingListShowController = myApp
+    .controller('ShoppingListShowController', ShoppingListShowController);
+
+    //service
+    var ShoppingListService = myApp.service('ShoppingListService', ShoppingListService);
+
+    ShoppingListAddController.$inject = ['ShoppingListService'];
+    ShoppingListShowController.$inject = ['ShoppingListService'];
+    
+    
+    /*
+            //adds things to array 
+           //calls the service addItem and passes input field bound items 
+    */
+
+    function ShoppingListAddController(ShoppingListService) { 
+        var itemAdder = this;
+        itemAdder.itemName = '';
+        itemAdder.itemQuantity = '';
+        itemAdder.addItem = function() {  
+            ShoppingListService.addItem(itemAdder.itemName, itemAdder.itemQuantity);
+        }
+    }
+    
+    
+    
+    /*
+        //also injects the service and since it's
+        //the same instance, getItems returns items in array
+        //so whatever was inserted to array by other 
+        //controller its going to be exposed by this one.
+    
+    */
+
+
+    function ShoppingListShowController(ShoppingListService) {  
+        var showList = this;                                    
+        showList.items = ShoppingListService.getItems();         
+    }                                                                       
+
+    /*
+        //ShoppingListService function
+        ------------------------------
+        and it's being used as a function constructor, so we can attach things to the 
+        'this' variable in order to expose them to the global scope.
+    */    
+
+    function ShoppingListService() {
+        var service = this;
+        //List of shopping items
+        var items = [];
+        service.addItem = function(itemName,quantity) { //takes to args and creates an object
+            //item obj
+            var item = {
+                name: itemName,
+                quantity: quantity
+            };
+            //add to arr
+            items.push(item);
+        };
+
+        service.getItems = function() { //getItems exposes items array as it returns items
+            return items;
+        };
+    }
+
+```
 
 
 
