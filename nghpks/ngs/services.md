@@ -42,6 +42,7 @@ That allows for sharing data between multiple controllers.
 So if you place some data into the service of one controller, you can immediately    
 retrieve it in another controller injected with the same service.
 
+<br/>
 
 ### example using two separate controllers with one service to create a shopping list adder
 
