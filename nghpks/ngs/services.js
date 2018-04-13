@@ -31,6 +31,11 @@ function NeedListController(ServiceList) {
     var needlist = this;
     //items
     needlist.items = ServiceList.showTime();
+    
+    //remove by index (function cause i'm using a fn in index unlike items)
+    needlist.remove = function(index) {
+        ServiceList.remove(index)
+    }
 
 }
 
@@ -52,6 +57,11 @@ function ServiceList() {
     service.showTime = function() {
         console.log(items);
         return items;
+    }
+    
+    service.remove = function(index) {
+        items.pop(index);
+       
     }
 
 }
@@ -88,7 +98,9 @@ function ServiceList() {
         <!-- list items here -->
         
         <ul>
-            <li ng-repeat="item in needlist.items">{{item.name}}, qty: {{item.quantity}}</li>
+            <li ng-repeat="item in needlist.items">{{item.name}}, qty: {{item.quantity}}
+                <button ng-click="needlist.remove($index);">remove</button>
+            </li>
         </ul>
 
     </div>
