@@ -20,10 +20,12 @@ AddToListController.$inject = ['ServiceList'];
 
 function AddToListController(ServiceList) {
     var addlist = this;
-    addlist.addItem = function() {
-        console.log(addlist.itemName, addlist.itemQty);
+    //pass something
+    if(addlist.itemName !== undefined && addlist.itemName !== "") {
+        console.log(addlist.itemName);
         //add to list
         ServiceList.addToList(addlist.itemName,addlist.itemQty);
+
     };
 }
 
