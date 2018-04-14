@@ -60,7 +60,8 @@ function ServiceList() {
     }
     
     service.remove = function(index) {
-        items.pop(index);
+        //position,amount    
+        items.splice(index,1);
        
     }
 
