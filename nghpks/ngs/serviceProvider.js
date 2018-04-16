@@ -105,6 +105,75 @@ function ShoppingListServiceProvider() {
 
 
 
+/*
+
+html
+-----
+
+
+<!Doctype html>
+<html ng-app="myApp">
+<head>
+    <script type="text/javascript" src="angular/angular.js"></script>
+    <script src="angular/angular-route.js"></script>
+    <script src="angular/angular-loader.js"></script>
+    <script src="./appfactory.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>Provider</title>
+</head>
+<body>   
+  <div class="shop">
+    <h1>Custom Service Provider</h1>
+    <div class="addlist" ng-controller="ShoppingListController as list">
+        <h3>Shopping list 1</h3>
+
+        <input type="text" id="item" class="inputfield" ng-model="list.itemName" placeholder="item name" />
+
+        <input type="number" id="qty" class="inputfield" ng-model="list.itemQuantity" placeholder="quantity" />
+
+        <button ng-click="list.addItem();">Add Item</button>
+<br/>
+<br/>
+<br/>
+{{list.itemName}}  {{list.itemQuantity}}
+
+        <ul>
+            <li ng-repeat="item in list.items">
+                {{item.name}}, qty: {{item.quantity}}
+            <button ng-click="list.removeItem($index);">Remove item</button>
+            </li>
+           
+        </ul>
+        <div class="error">Error: {{list.errorMessage}}</div>
+
+    </div>
+    <!-- endof controller -->
+
+  </div>
+<!-- endof shop -->
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+*/
+
 
 
 
