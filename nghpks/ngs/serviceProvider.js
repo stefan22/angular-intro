@@ -1,3 +1,12 @@
+/*
+
+    • unlike factory, it is more flexible and it gets configured not at time of use but when the app get bootstrapped
+    • the config method of provider gets called before any other service so it can't be used with regular services
+    • to inject the service provider, need to add 'Provider' to the name ( nameProvider)
+*/
+
+
+
 var myApp = angular.module('myApp', []);
 
 //controller
