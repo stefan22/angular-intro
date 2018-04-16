@@ -27,8 +27,17 @@
 ![](../images/providerstep4a.png)
 
 - optional define config function
+By defining the config function, we're injecting ServiceProvider into the config function.
+We cannot inject any regular services into the config function, simply because it gets executed
+before any services' factories or controllers are even created.
+So we need to get at the provider function over a particular service.
+That thing that gets inject into the config function is that string plus the string provider.
+So if provider been declared as 'Service', then 'ServiceProvider'.
+Then we can use the 'ServiceProvider' instance to get at its properties, like config, and
+the config properties to configure it for a particular application.
 
-![](../images/providerstep4b.png)
+
+![](../images/providerstep4g.png)
 
 
 
