@@ -63,7 +63,7 @@ Then,
 
 
 
-
+![](../images/promises4.png)
 
 
 
