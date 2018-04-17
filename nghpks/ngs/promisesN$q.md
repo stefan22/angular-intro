@@ -36,11 +36,26 @@
 
 
 
+![](../images/angularpromise.png)
 
 
+- next step is for the caller to call our asynchronous function, and capture a reference    
+  to the promise object.
 
 
+![](../images/promises2.png)
 
+
+Then, I can call the `then` function on my promise and extract the results, or handle the
+error.        
+`then` function takes two arguments (both functions themselves)
+`then` function is also chainable because it itself returns a promise.
+
+
+![](../images/promises3.png)
+
+- `$q` service also has the capabilities to resolve multiple promises asynchronously.
+- so no promise has to wait for another to complete, in order to even start running.
 
 
 
