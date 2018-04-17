@@ -35,6 +35,9 @@
 - in angular promises are created through the special service called ***$q*** service.
 
 
+> To manually create an asynchronous environment, you must call the following method in the $q service:          
+> ***$q.defer()***
+
 
 ![](../images/angularpromise.png)
 
