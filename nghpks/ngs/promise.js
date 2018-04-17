@@ -1,5 +1,11 @@
 /*
 
+   Not how you would do promises in angular.
+   Just an example using $timeout to recreate asynch behaviour, in order to make a few points about different ways of 
+   handling promises/ and errors.
+   
+   
+
    losing weight list:
    -------------------
    You can't enter more than 7 items of a type &
