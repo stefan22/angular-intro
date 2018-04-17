@@ -46,10 +46,11 @@
 ![](../images/promises2.png)
 
 
-Then, I can call the `then` function on my promise and extract the results, or handle the
-error.        
-`then` function takes two arguments (both functions themselves)
-`then` function is also chainable because it itself returns a promise.
+Then,         
+
+- I can call the `then` function on my promise and extract the results, or handle the error.        
+  +   `then` function takes two arguments (both functions themselves) . 
+  +   `then` function is also chainable because it itself returns a promise.      
 
 
 ![](../images/promises3.png)
