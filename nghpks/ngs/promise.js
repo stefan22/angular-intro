@@ -1,7 +1,12 @@
 /*
-   enter chocolates to the list and it throws a message: "Stay away from chocolates man!"
+
+   losing weight list:
+   -------------------
+   You can't enter more than 7 items of a type &
+   Chocolates are Not allowed.
    
-   enter more than 7 items and you get a message: "Alright, slow down speed racer!"
+   • enter chocolates to the list and it throws a message: "Stay away from chocolates man!"
+   • enter more than 7 items and you get a message: "Alright, slow down speed racer!"
 
 */
 
