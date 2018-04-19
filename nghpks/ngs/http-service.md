@@ -63,6 +63,16 @@ ex:
 
 
 
+### summary
+
+- $http service is based on the promise api exposed to by $q
+- $http itself is a function
+    + takes a single config obj as parameter (url only req prop)
+    + returns a promise to be resolved with the '.then' function
+
+- response.data property holds the server data response
+- angular returns json strings into javascript objects automatically
+- module.constant can be used as an injectable constant
 
 
 
