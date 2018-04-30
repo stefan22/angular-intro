@@ -1,0 +1,1 @@
+## Directive's Isolate Scope
