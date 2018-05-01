@@ -7,29 +7,28 @@
 	<script type="text/javascript" src="app.js"></script>
 	<link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body ng-app="myApp">
 	<div id="main">
 		<h1>Directives with Isolate Scope</h1>
 		
 
-		<div id="list1">
+		<div id="list1" ng-controller="ShoppingListController1 as list1">
 			<h2>Shopping List 1</h2>
-			<input type="text" placeholder="enter item name">
-			<input type="number" placeholder="enter item quantity">
+			<input type="text" placeholder="enter item name" ng-model="list1.itemName">
+			<input type="number" placeholder="enter item quantity" ng-model="list1.itemQty">
 
-			<button>Add item</button>
+			<button ng-click="list1.addItem();">Add item</button>
+
+			{{list1.itemName}}
+
 
 			<ul class="needto">
-				<li>milk</li>
-				<li>fries</li>
-				<li>oranges</li>
-				<li>milk</li>
-				<li>fries</li>
-				<li>oranges</li>
+				<li ng-repeat="item in list1.shoppingList">{{item.name}}, {{item.qty}}</li>
 			</ul>
 
 		</div>
 		<!-- endof list1 -->
+
 
 		<div id="list2">
 			<h2>Shopping List 2</h2>
