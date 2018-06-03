@@ -1,0 +1,151 @@
+body {
+	box-sizing: border-box;
+	min-height: 100vh;
+	width: 100%;
+	font-size: 16px;
+}
+
+.wrapper {
+	width:1200px;
+	margin:0 auto;
+	overflow: hidden;
+}
+
+header {
+	background-color: #F57C00;
+    color: white;
+    letter-spacing: 1px;
+    padding: 1em 0;
+}
+
+
+h1 {
+	text-align: center;
+	font-size: 2em;
+}
+
+h3 {
+	text-align: center;
+    color: #D84315;
+    text-decoration: underline;
+}
+
+.section {
+	display: block;
+	min-height: 450px;
+	width:45%;
+	float: left;
+	border:1px dotted gray;
+	padding:1em;
+}
+
+.list {
+	padding: 0 2em;
+    margin: .25em 0 0;
+    border: 1px solid lightgray;
+    background: lightskyblue;
+}
+
+ul.buylist {
+	list-style: none;
+    padding: 1em 2em;
+}
+
+ul.buylist li {
+	margin: .3em 0;
+    font-size: 1.1em;
+    color: #2b5c7a;
+}
+
+.left-margin {
+	margin-left:2em;
+}
+
+label {
+	font-size:1.2em;
+	display: block;
+	margin:.5em 0;
+
+}
+
+input {
+	font-size: 1em;
+    padding: 12px 30px;
+    border: 1px solid #39b2fd;
+    border-radius: 4px;
+    width: 250px;
+}
+
+input:focus, input:active {
+	outline:none;
+}
+
+
+.add-item {
+	padding: 10px 20px;
+    display: block;
+    width: 150px;
+    background: #F57C00;
+    margin: 2em 0;
+    border: 1px solid #a95f13;
+    border-radius: 4px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.add-item:focus {
+    outline: none;
+}
+
+
+.tobuy {
+	background: white;
+    overflow: hidden;
+    margin: 2em 0;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 2px #0265a1;
+    min-height: 240px;
+}
+
+.red {
+    color:red;
+}
+
+
+.item-name {
+    width:140px;
+    display: inline-block;
+}
+
+.item-name::after {
+    content: " ... "
+}
+
+.item-qty {
+    width:40px;
+    display: inline-block;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

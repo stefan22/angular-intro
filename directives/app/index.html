@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>directives</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+ <div class="wrapper" ng-app="shopApp">
+ 	<section class="section" ng-controller="ShopController1 as shop1">
+ 		<header>
+ 			<h1>Shopping List 1</h1>
+ 		</header>
+ 		
+ 		<div class="list">
+ 			
+ 			<label for="item">Item name:</label> 
+ 			<input type="text" name="item" id="list1" class="item1" placeholder="enter item1" ng-model="shop1.name" />
+ 			
+ 			<label for="item">Item quantity:</label>	
+ 			<input type="number" name="item" class="item1"placeholder="enter quantity" ng-model="shop1.qty">
+ 			
+ 			<button type="submit" ng-click="shop1.addItem(shop1.name,shop1.qty);" id="button1" class="add-item">Add item</button>
+ 			
+ 			<div id="tobuy1" class="tobuy">
+ 				<h3>Need to buy1:</h3>
+ 				<ul class="buylist">
+ 					<li ng-repeat="item in shop1.list">
+ 						<span class="item-name">{{item.name}}</span>
+ 						<span class="item-qty">Qty:</span>
+ 						<span class="red">{{item.qty}}</span>
+ 						<a href="#" ng-click="shop1.removeItem($index)">Remove item</a>
+ 					</li>
+ 				</ul>
+ 			</div>
+ 			<!-- tobuy -->
+ 		</div>
+ 		<!-- list -->
+ 	</section>
+
+ 	<section class="section left-margin" ng-controller="ShopController2">
+ 		<header>
+ 			<h1>Shopping List 2</h1>
+ 		</header>
+ 		<div class="list">
+ 			<label for="item">Item name:</label>
+ 			<input type="text" name="item" id="list2" class="item2" placeholder="enter item2" />
+ 			<label for="item">Item quantity:</label>	
+ 			<input type="number" name="item" class="item2" placeholder="enter quantity">
+ 			<button type="submit" id="button2" class="add-item">Add item</button>
+
+ 			<div id="tobuy1" class="tobuy">
+ 				<h3>Need to buy2:</h3>
+ 				<ul class="buylist">
+ 					<li>Milk</li>
+ 					<li>Cookies</li>
+ 					<li>Apples</li>
+ 					<li>shoes</li>
+ 					<li>shampoo</li>
+ 				</ul>
+ 			</div>
+ 			<!-- tobuy -->
+ 		</div>
+ 	</section>
+ 	
+
+
+
+ </div>
+<script type="text/javascript" src="scripts/angular/angular.min.js"></script>
+<script type="text/javascript" src="scripts/scripts.js"></script>
+</body>
+</html>
