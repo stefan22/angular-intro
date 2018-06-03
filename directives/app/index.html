@@ -7,7 +7,7 @@
 <body>
 
  <div class="wrapper" ng-app="shopApp">
- 	<section class="section" ng-controller="ShopController1 as shop1">
+ 	<section class="section" ng-controller="ShopController1 as shop">
  		<header>
  			<h1>Shopping List 1</h1>
  		</header>
@@ -15,21 +15,21 @@
  		<div class="list">
  			
  			<label for="item">Item name:</label> 
- 			<input type="text" name="item" id="list1" class="item1" placeholder="enter item1" ng-model="shop1.name" />
+ 			<input type="text" name="item" id="list1" class="item1" placeholder="enter item1" ng-model="shop.name" />
  			
  			<label for="item">Item quantity:</label>	
- 			<input type="number" name="item" class="item1"placeholder="enter quantity" ng-model="shop1.qty">
+ 			<input type="number" name="item" class="item1"placeholder="enter quantity" ng-model="shop.qty">
  			
- 			<button type="submit" ng-click="shop1.addItem(shop1.name,shop1.qty);" id="button1" class="add-item">Add item</button>
+ 			<button type="submit" ng-click="shop.addItem(shop.name,shop.qty);" id="button1" class="add-item">Add item</button>
  			
  			<div id="tobuy1" class="tobuy">
  				<h3>Need to buy1:</h3>
  				<ul class="buylist">
- 					<li ng-repeat="item in shop1.list">
+ 					<li ng-repeat="item in shop.list">
  						{{$index + 1}} <span class="item-name">{{item.name}}</span>
  						<span class="item-qty">Qty:</span>
  						<span class="red">{{item.qty}}</span>
- 						<a class="remove-item" href="#" ng-click="shop1.removeItem($index)">Remove item</a>
+ 						<a class="remove-item" href="#" ng-click="shop.removeItem($index)">Remove item</a>
  					</li>
  				</ul>
  			</div>
@@ -38,25 +38,30 @@
  		<!-- list -->
  	</section>
 
- 	<section class="section left-margin" ng-controller="ShopController2">
+ 	<section class="section left-margin" ng-controller="ShopController2 as shop2">
  		<header>
  			<h1>Shopping List 2</h1>
  		</header>
- 		<div class="list">
- 			<label for="item">Item name:</label>
- 			<input type="text" name="item" id="list2" class="item2" placeholder="enter item2" />
- 			<label for="item">Item quantity:</label>	
- 			<input type="number" name="item" class="item2" placeholder="enter quantity">
- 			<button type="submit" id="button2" class="add-item">Add item</button>
 
- 			<div id="tobuy1" class="tobuy">
- 				<h3>Need to buy2:</h3>
+ 		<div class="list">
+ 			
+ 			<label for="item">Item name:</label> 
+ 			<input type="text" name="item" id="list2" class="item1" placeholder="enter item2" ng-model="shop2.name" />
+ 			
+ 			<label for="item">Item quantity:</label>	
+ 			<input type="number" name="item" class="item1"placeholder="enter quantity" ng-model="shop2.qty">
+ 			
+ 			<button type="submit" ng-click="shop2.addItem(shop2.name,shop2.qty);" id="button2" class="add-item">Add item</button>
+ 			
+ 			<div id="tobuy2" class="tobuy">
+ 				<h3>Need to buy1:</h3>
  				<ul class="buylist">
- 					<li>Milk</li>
- 					<li>Cookies</li>
- 					<li>Apples</li>
- 					<li>shoes</li>
- 					<li>shampoo</li>
+ 					<li ng-repeat="item in shop2.list">
+ 						{{$index + 1}} <span class="item-name">{{item.name}}</span>
+ 						<span class="item-qty">Qty:</span>
+ 						<span class="red">{{item.qty}}</span>
+ 						<a class="remove-item" href="#" ng-click="shop2.removeItem($index)">Remove item</a>
+ 					</li>
  				</ul>
  			</div>
  			<!-- tobuy -->
