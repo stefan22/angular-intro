@@ -114,7 +114,7 @@ input:focus, input:active {
 
 
 .item-name {
-    width:140px;
+    width:175px;
     display: inline-block;
 }
 
@@ -128,6 +128,12 @@ input:focus, input:active {
     
 }
 
+.remove-item {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: .8em;
+    color: darkred;
+}
 
 
 

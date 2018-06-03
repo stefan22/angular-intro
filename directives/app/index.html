@@ -26,10 +26,10 @@
  				<h3>Need to buy1:</h3>
  				<ul class="buylist">
  					<li ng-repeat="item in shop1.list">
- 						<span class="item-name">{{item.name}}</span>
+ 						{{$index + 1}} <span class="item-name">{{item.name}}</span>
  						<span class="item-qty">Qty:</span>
  						<span class="red">{{item.qty}}</span>
- 						<a href="#" ng-click="shop1.removeItem($index)">Remove item</a>
+ 						<a class="remove-item" href="#" ng-click="shop1.removeItem($index)">Remove item</a>
  					</li>
  				</ul>
  			</div>
